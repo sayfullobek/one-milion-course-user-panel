@@ -19,6 +19,7 @@ export const Product = () => {
     useEffect(() => {
         getAll()
     }, [])
+    console.log(products)
     return (
         <div>
             {loading ? (
