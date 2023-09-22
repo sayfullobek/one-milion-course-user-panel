@@ -30,7 +30,7 @@ export const Product = () => {
                                     <div className="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
                                          data-mdb-ripple-color="light">
                                         <img
-                                            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/12.webp"
+                                            src={BASE_URL + "/attachment/download?id=" + products.photoId}
                                             style={{borderTopLeftRadius: "15px", borderTopRightRadius: "15px"}}
                                             className="img-fluid"
                                             alt="Laptop"/>
