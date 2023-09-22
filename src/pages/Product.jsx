@@ -10,6 +10,7 @@ export const Product = () => {
     const getAll = async () => {
         try {
             const res = await axios.get(BASE_URL + "/product/" + id)
+            console.log(res)
             setProducts(res.data)
         } catch (err) {
 
