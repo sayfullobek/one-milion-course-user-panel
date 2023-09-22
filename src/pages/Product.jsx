@@ -10,6 +10,7 @@ export const Product = () => {
     const getAll = async () => {
         try {
             const res = await axios.get(BASE_URL + "/product/" + id)
+            console.log(res)
             setProducts(res.data)
             setLoading(true)
         } catch (err) {
@@ -19,7 +20,6 @@ export const Product = () => {
     useEffect(() => {
         getAll()
     }, [])
-    console.log(products)
     return (
         <div>
             {loading ? (
@@ -30,11 +30,11 @@ export const Product = () => {
                                 <div className="card media" style={{borderRadius: "15px", width: "90%"}}>
                                     <div className="bg-image hover-overlay ripple ripple-surface ripple-surface-light"
                                          data-mdb-ripple-color="light">
-                                        <img
-                                            src={BASE_URL + "/attachment/download?id=" + products.photoId}
-                                            style={{borderTopLeftRadius: "15px", borderTopRightRadius: "15px"}}
-                                            className="img-fluid"
-                                            alt="Laptop"/>
+                                        {/*<img*/}
+                                        {/*    src={BASE_URL + "/attachment/download?id=" + products.photoId}*/}
+                                        {/*    style={{borderTopLeftRadius: "15px", borderTopRightRadius: "15px"}}*/}
+                                        {/*    className="img-fluid"*/}
+                                        {/*    alt="Laptop"/>*/}
                                         <a href="#!">
                                             <div className="mask"/>
                                         </a>
