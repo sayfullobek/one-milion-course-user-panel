@@ -87,17 +87,22 @@ export const Product = () => {
                             <div className={"w-100 d-flex align-items-center justify-content-center"}>
                                 <div className="card media" style={{borderRadius: "15px", width: "90%"}}>
                                     <div className="card" aria-hidden="true">
-                                        <img src="..." className="card-img-top" alt="..."/>
-                                        <div className="card-body pb-0">
-                                            <p className="card-text placeholder-glow">
-                                                <span className="placeholder col-7"></span>
-                                                <span className="placeholder col-4"></span>
-                                                <span className="placeholder col-4"></span>
-                                                <span className="placeholder col-6"></span>
-                                                <span className="placeholder col-8"></span>
-                                            </p>
-                                        </div>
+                                        <div className="card-img-top img-fluid bg-secondary"/>
                                     </div>
+                                    <div className="card-body">
+                                        <h5 className="card-title placeholder-glow">
+                                            <span className="placeholder col-6"/>
+                                        </h5>
+                                    </div>
+                                    <hr className="my-0"/>
+                                    <p className="card-text placeholder-glow">
+                                        <span className="placeholder col-7"/>
+                                        <span className="placeholder col-4"/>
+                                        <span className="placeholder col-4"/>
+                                        <span className="placeholder col-6"/>
+                                        <span className="placeholder col-8"/>
+                                    </p>
+                                    <a className="btn btn-primary disabled placeholder col-6" aria-disabled="true"/>
                                 </div>
                             </div>
                         </div>
