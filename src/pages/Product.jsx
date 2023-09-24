@@ -99,7 +99,7 @@ export const Product = () => {
                                         </h5>
                                     </div>
                                     <hr className="my-0"/>
-                                    <p className="card-text placeholder-glow">
+                                    <p className="card-text placeholder-glow p-3">
                                         <span className="placeholder col-7"/>
                                         <span className="placeholder col-4"/>
                                         <span className="placeholder col-4"/>
