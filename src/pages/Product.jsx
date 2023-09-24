@@ -81,7 +81,29 @@ export const Product = () => {
                     </div>
                 </section>
             ) : (
-                <h1>loading...</h1>
+                <section className={"w-100"} style={{backgroundColor: "#eee", height: '100vh'}}>
+                    <div className={"w-100"}>
+                        <div>
+                            <div className={"w-100 d-flex align-items-center justify-content-center"}>
+                                <div className="card media" style={{borderRadius: "15px", width: "90%"}}>
+                                    <div className="card" aria-hidden="true">
+                                        <img src="..." className="card-img-top" alt="...">
+                                            <div className="card-body pb-0">
+                                                <p className="card-text placeholder-glow">
+                                                    <span className="placeholder col-7"></span>
+                                                    <span className="placeholder col-4"></span>
+                                                    <span className="placeholder col-4"></span>
+                                                    <span className="placeholder col-6"></span>
+                                                    <span className="placeholder col-8"></span>
+                                                </p>
+                                            </div>
+                                        </img>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             )}
         </div>
     )
