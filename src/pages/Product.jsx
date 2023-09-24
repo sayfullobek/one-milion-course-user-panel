@@ -87,7 +87,11 @@ export const Product = () => {
                             <div className={"w-100 d-flex align-items-center justify-content-center"}>
                                 <div className="card media" style={{borderRadius: "15px", width: "90%"}}>
                                     <div className="card" aria-hidden="true">
-                                        <div className="w-100 bg-secondary placeholder" style={{height: '100%'}}/>
+                                        <div className="w-100 bg-secondary placeholder" style={{
+                                            height: '42vh',
+                                            borderTopLeftRadius: "15px",
+                                            borderTopRightRadius: "15px"
+                                        }}/>
                                     </div>
                                     <div className="card-body">
                                         <h5 className="card-title placeholder-glow">
