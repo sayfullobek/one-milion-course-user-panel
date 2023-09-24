@@ -16,7 +16,6 @@ export const Product = () => {
 
         }
     }
-    console.log('a')
     useEffect(() => {
         getAll()
     }, [])
@@ -88,17 +87,16 @@ export const Product = () => {
                             <div className={"w-100 d-flex align-items-center justify-content-center"}>
                                 <div className="card media" style={{borderRadius: "15px", width: "90%"}}>
                                     <div className="card" aria-hidden="true">
-                                        <img src="..." className="card-img-top" alt="...">
-                                            <div className="card-body pb-0">
-                                                <p className="card-text placeholder-glow">
-                                                    <span className="placeholder col-7"></span>
-                                                    <span className="placeholder col-4"></span>
-                                                    <span className="placeholder col-4"></span>
-                                                    <span className="placeholder col-6"></span>
-                                                    <span className="placeholder col-8"></span>
-                                                </p>
-                                            </div>
-                                        </img>
+                                        <img src="..." className="card-img-top" alt="..."/>
+                                        <div className="card-body pb-0">
+                                            <p className="card-text placeholder-glow">
+                                                <span className="placeholder col-7"></span>
+                                                <span className="placeholder col-4"></span>
+                                                <span className="placeholder col-4"></span>
+                                                <span className="placeholder col-6"></span>
+                                                <span className="placeholder col-8"></span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
