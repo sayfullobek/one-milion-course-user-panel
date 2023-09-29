@@ -51,10 +51,10 @@ export const Product = () => {
                                             <div>
                                                 <div
                                                     className="d-flex flex-row justify-content-end mt-1 mb-4 text-danger">
-                                                    <i className="fas fa-star"></i>
-                                                    <i className="fas fa-star"></i>
-                                                    <i className="fas fa-star"></i>
-                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"/>
+                                                    <i className="fas fa-star"/>
+                                                    <i className="fas fa-star"/>
+                                                    <i className="fas fa-star"/>
                                                 </div>
                                                 <p className="small text-muted">Rated 4.0/5</p>
                                             </div>
