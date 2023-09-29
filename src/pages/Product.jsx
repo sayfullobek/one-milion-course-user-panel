@@ -72,10 +72,10 @@ export const Product = () => {
                                     <div className="card-body">
                                         <div className="d-flex justify-content-between align-items-center pb-2 mb-1">
                                             <button type="button" className="btn btn-primary"><i
-                                                className="fa-regular fa-heart" style={{color: "#135ae7"}}/></button>
-                                            <button type="button" className="btn btn-primary"><i
-                                                className="fa-solid fa-cart-arrow-down" style={{color: "#135ae7"}}/>
+                                                className="bi bi-suit-heart"/>
                                             </button>
+                                            <button type="button" className="btn btn-primary"><i
+                                                className="bi bi-cart4"/></button>
                                             <button type="button" className="btn btn-primary">Buy now</button>
                                         </div>
                                     </div>
