@@ -5,7 +5,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path={"/product/:id"} element={<Product/>}/>
+                <Route path={"/product/:id/:chatId"} element={<Product/>}/>
             </Routes>
         </BrowserRouter>
     )

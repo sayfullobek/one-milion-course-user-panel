@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 
 export const Product = () => {
     const id = useParams().id
+    const chatId = useParams().chatId
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
     const getAll = async () => {
