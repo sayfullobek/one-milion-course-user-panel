@@ -20,6 +20,12 @@ export const Product = () => {
     useEffect(() => {
         getAll()
     }, [])
+    const basketAndLike = async (status) => {
+        try {
+            await axios.put(BASE_URL + "/product/like-basket/" + id + "?chatId=" + chatId + "&status=" + status)
+        } catch (err) {
+        }
+    }
     return (
         <div>
             {loading ? (
@@ -72,10 +78,12 @@ export const Product = () => {
                                     <hr className="my-0"/>
                                     <div className="card-body">
                                         <div className="d-flex justify-content-between align-items-center pb-2 mb-1">
-                                            <button type="button" className="btn btn-primary"><i
+                                            <button type="button" className="btn btn-primary"
+                                                    onClick={() => basketAndLike('like')}><i
                                                 className="bi bi-suit-heart"/>
                                             </button>
-                                            <button type="button" className="btn btn-primary"><i
+                                            <button type="button" className="btn btn-primary"
+                                                    onClick={() => basketAndLike('basket')}><i
                                                 className="bi bi-cart4"/></button>
                                             <button type="button" className="btn btn-primary">Buy now</button>
                                         </div>
