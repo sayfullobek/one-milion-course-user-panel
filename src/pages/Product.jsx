@@ -8,10 +8,17 @@ export const Product = () => {
     const chatId = useParams().chatId
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
+    const [like, setLike] = useState(false)
+    const [basket, setBasket] = useState(false)
+
     const getAll = async () => {
         try {
             const res = await axios.get(BASE_URL + "/product/" + id)
             setProducts(res.data)
+            const likeRes = await axios.get(BASE_URL + "/product/like/" + id + "?chatId=" + chatId)
+            const basketRes = await axios.get(BASE_URL + "/product/basket/" + id + "?chatId=" + chatId)
+            setLike(likeRes.data.success)
+            setBasket(basketRes.data.success)
             setLoading(true)
         } catch (err) {
 
@@ -80,11 +87,13 @@ export const Product = () => {
                                         <div className="d-flex justify-content-between align-items-center pb-2 mb-1">
                                             <button type="button" className="btn"
                                                     onClick={() => basketAndLike('like')}><i
-                                                className="bi bi-suit-heart"/>
+                                                className="bi bi-suit-heart"
+                                                style={like ? {color: 'red'} : {color: 'black'}}/>
                                             </button>
                                             <button type="button" className="btn btn-success"
                                                     onClick={() => basketAndLike('basket')}><i
-                                                className="bi bi-cart4"/></button>
+                                                className="bi bi-cart4"
+                                                style={basket ? {color: 'green'} : {color: 'yellow'}}/></button>
                                             <button type="button" className="btn btn-primary">Buy now</button>
                                         </div>
                                     </div>
