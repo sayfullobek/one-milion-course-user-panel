@@ -31,8 +31,9 @@ export const Product = () => {
     const basketAndLike = async (status) => {
         try {
             const res = await axios.put(BASE_URL + "/product/like-basket/" + id + "?chatId=" + chatId + "&status=" + status)
+            await getAll()
             navigate("/product/" + id + "/" + chatId)
-            console.log(res)
+            await getAll()
         } catch (err) {
         }
     }
