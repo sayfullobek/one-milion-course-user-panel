@@ -1,9 +1,10 @@
 import axios from "axios";
 import {BASE_URL} from "../base/BaseUrl";
-import {useParams} from 'react-router-dom'
+import {useParams, useNavigate} from 'react-router-dom'
 import {useEffect, useState} from "react";
 
 export const Product = () => {
+    const navigate = useNavigate()
     const id = useParams().id
     const chatId = useParams().chatId
     const [products, setProducts] = useState([])
@@ -30,6 +31,7 @@ export const Product = () => {
     const basketAndLike = async (status) => {
         try {
             await axios.put(BASE_URL + "/product/like-basket/" + id + "?chatId=" + chatId + "&status=" + status)
+            navigate("/product/" + id + "/" + chatId)
         } catch (err) {
         }
     }
